@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+  
+  body {
+      font-family: Helvetica, sans-serif, Arial;
+      margin: 0;
+      padding: 0;
+      display: block;
+  }
+  
+  nav{
+    position: fixed;
+    background-color: #fff;
+    margin: 0;
+    top: 0;
+    box-shadow: 2px 2px 2px rgb(212, 212, 212);
+  }
+  
+  ul {
+    list-style-type: none;
+    margin: 0;
+    margin-left: 700px;
+    padding: 0;
+    overflow: hidden;
+    width: 650px;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: #4a3a35;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  
+  li a:hover {
+    background-color: rgb(107, 106, 106);
+    color: white;
+  }
+
+  article{
+    width: 100%;
+    padding: 30px;
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+
+  #home {
+    display: block;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    /* background-image: url("../imagens/background4.png"); */
+    background-color: #fcfcfc;
+    /* background-size: 100%;
+    background-attachment: fixed; */
+  }
+
+  #apresentacao{
+    margin-top: 200px;
+    margin-left: 100px;
+  }
+
+  #ola, #meu-nome, #profissao {
+    color:#4a3a35;
+    margin-bottom: 5px;
+    margin-top: 5px;
+  }
+
+  #meu-nome {
+    font-size: 40px;
+    font-weight: bold;
+  }
+
+  #div-botao{
+    margin-top: 30px;
+  }
+
+  .botao {
+    background-color: #f9c536;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+
+  }
+
+  .botao:hover {
+    background-color: #f8d165;
+  }
+
+  #foto-apresentacao{
+    padding-right: 100px;
+  }
+
+  #imagem-apresentacao{
+    margin-top: 100px;
+    width: 400px;
+    height: 400px;
+  }
+
+  #sobre {
+    display: flex;
+    height: 100vh;
+    flex-direction: row;
+  }
+
+  #texto-sobre-mim{
+    width: 800px;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: justify;
+    color: #4a3a35;
+    margin-top: 50px;
+  }
+
+  #imagem-sobre-mim{
+    width: 200px;
+  }
+
+  #img-sobre-mim{
+    width: 250px;
+    margin-top: 150px;
+  }
+
+
+#habilidades{
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  background-color: #fcfcfc;
+  
+}
+
+#habilidades-grafico{
+  width: 545px;
+  margin-right: 170px;
+}
+
+#imagem-habilidades{
+  width: 250px;
+  margin-top: 150px;
+}
+
+::selection{
+  color: #fff;
+}
+
+.skill-bars{
+  padding: 25px 30px;
+  width: 450px;
+  background: #fff;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+  border-radius: 10px;
+  margin-top: 30px;
+}
+.skill-bars .bar{
+  margin: 20px 0;
+}
+.skill-bars .bar:first-child{
+  margin-top: 0px;
+}
+.skill-bars .bar .info{
+  margin-bottom: 5px;
+}
+.skill-bars .bar .info span{
+  font-weight: 500;
+  font-size: 17px;
+  opacity: 0;
+  animation: showText 0.5s 1s linear forwards;
+}
+@keyframes showText {
+  100%{
+    opacity: 1;
+  }
+}
+.skill-bars .bar .progress-line{
+  height: 10px;
+  width: 100%;
+  background: #f0f0f0;
+  position: relative;
+  transform: scaleX(0);
+  transform-origin: left;
+  border-radius: 10px;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,0.05),
+              0 1px rgba(255,255,255,0.8);
+  animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
+}
+@keyframes animate {
+  100%{
+    transform: scaleX(1);
+  }
+}
+.bar .progress-line span{
+  height: 100%;
+  position: absolute;
+  border-radius: 10px;
+  transform: scaleX(0);
+  transform-origin: left;
+  background: #6665ee;
+  animation: animate 1s 1s cubic-bezier(1,0,0.5,1) forwards;
+}
+.bar .progress-line.pentaho span{
+  width: 90%;
+}
+.bar .progress-line.sql span{
+  width: 85%;
+}
+.bar .progress-line.powerbi span{
+  width: 80%;
+}
+.bar .progress-line.python span{
+  width: 60%;
+}
+
+.bar .progress-line.estatistica span{
+  width: 40%;
+}
+
+.bar .progress-line.html span{
+  width: 70%;
+}
+
+.bar .progress-line.css span{
+  width: 60%;
+}
+
+.progress-line span::before{
+  position: absolute;
+  content: "";
+  top: -10px;
+  right: 0;
+  height: 0;
+  width: 0;
+  border: 7px solid transparent;
+  border-bottom-width: 0px;
+  border-right-width: 0px;
+  border-top-color: #000;
+  opacity: 0;
+  animation: showText2 0.5s 1.5s linear forwards;
+}
+.progress-line span::after{
+  position: absolute;
+  top: -28px;
+  right: 0;
+  font-weight: 500;
+  background: #000;
+  color: #fff;
+  padding: 1px 8px;
+  font-size: 12px;
+  border-radius: 3px;
+  opacity: 0;
+  animation: showText2 0.5s 1.5s linear forwards;
+}
+@keyframes showText2 {
+  100%{
+    opacity: 1;
+  }
+}
+.progress-line.pentaho span::after{
+  content: "90%";
+}
+.progress-line.sql span::after{
+  content: "85%";
+}
+.progress-line.powerbi span::after{
+  content: "80%";
+}
+.progress-line.python span::after{
+  content: "60%";
+}
+
+.progress-line.estatistica span::after{
+  content: "40%";
+}
+
+.progress-line.html span::after{
+  content: "70%";
+}
+
+.progress-line.css span::after{
+  content: "60%";
+}
